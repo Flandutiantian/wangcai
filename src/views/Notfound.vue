@@ -1,7 +1,9 @@
 <template>
   <div class="Money">
-    <h1>404</h1>
-    <Nav />
+    <div>
+<h1>404</h1>
+<div><router-link to="/">返回首页</router-link></div>
+    </div>  
   </div>
 </template>
 

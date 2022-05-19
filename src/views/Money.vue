@@ -1,8 +1,9 @@
 <template>
-  <div class="Money">
-    <h1>记账</h1>
-    <Nav />
-  </div>
+
+  <Layout>
+ <h1>记账</h1>
+  </Layout> 
+
 </template>
 
 <script lang="ts">
@@ -10,7 +11,3 @@
   name: 'Money',
   };
 </script>
-
-<style lang="scss"scoped>
-
-</style>
