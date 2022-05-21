@@ -1,8 +1,8 @@
 <template>
-  <div class="statistics">
-    <h1>统计</h1>
-    <Nav />
-  </div>
+  
+  <Layout>
+ <h1>统计</h1>
+  </Layout> 
 </template>
 
 <script> 
@@ -11,6 +11,3 @@
   }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
