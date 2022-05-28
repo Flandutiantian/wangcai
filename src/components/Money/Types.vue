@@ -13,7 +13,7 @@
 
 <script lang="ts">
   import Vue from 'vue';
-  import {Component, Prop} from 'vue-property-decorator';
+  import {Component, Watch} from 'vue-property-decorator';
   @Component
   export default class Types extends Vue {
     type = '-'; // '-'表示支出，'+'表示收入
@@ -24,7 +24,15 @@
       }
       this.type = type;
     }
+    @Watch('type')
+    onTypeChanged(){
+      this.$emit('update:value', value);
+    }
   }
+
+function value(arg0: string, value: any) {
+throw new Error('Function not implemented.');
+}
 </script>
 
 <style lang="scss" scoped>

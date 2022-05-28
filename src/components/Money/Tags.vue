@@ -1,7 +1,7 @@
 <template>
   <div class="tags">
     <div class="new">
-      <button>新增标签</button>
+      <button @click="create">新增标签</button>
     </div>
     <ul class="current">
       <li v-for="tag in dataSource" :key="tag"
@@ -29,8 +29,17 @@ import {Component, Prop} from 'vue-property-decorator';
         this.selectedTags.splice(index, 1);
       }else{
         this.selectedTags.push(tag);
-      }     
+      }  
+      this.$emit('update:value',this.selectedTags)   
     } 
+    create(){
+    const name = window.prompt('请输入标签名')
+    if(name === ''){
+      window.alert('标签名不能为空')
+    }else if(this.dataSource){
+    this.$emit('updata:dataSourse',[...this.dataSource,name]);
+      }        
+    }
   };
 </script>
 
@@ -46,10 +55,9 @@ import {Component, Prop} from 'vue-property-decorator';
       flex-wrap: wrap;
       > li {
         background: #d9d9d9;
-        $h: 24px;
-        height: $h;
-        line-height: $h;
-        border-radius: $h/2;
+        height: 24px;
+        line-height: 24px;
+        border-radius: 12px;
         padding: 0 16px;
         margin-right: 12px;
         margin-top: 4px;
