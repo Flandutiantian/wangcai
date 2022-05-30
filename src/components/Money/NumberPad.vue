@@ -26,6 +26,7 @@ import {Component, Prop} from 'vue-property-decorator';
  
  @Component
   export default class NumberPad extends Vue {
+   [x: string]: any;
     output: string = '';
 
     inputContent(event: MouseEvent){
@@ -56,6 +57,8 @@ clear() {
 }
 ok(){
   this.$emit('update:value',this.output);
+  this.$emit('submit',this.output);
+  this.output = '0';
 }
     }
 </script>

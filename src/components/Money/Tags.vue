@@ -20,7 +20,7 @@ import {Component, Prop} from 'vue-property-decorator';
  
  @Component
   export default class Tags extends Vue {
-    @Prop(Array) dataSource: string[] | undefined;
+    @Prop() dataSource: string[] | undefined;
     selectedTags: string[] =[];
 
     toggle(tag: string){
@@ -37,7 +37,7 @@ import {Component, Prop} from 'vue-property-decorator';
     if(name === ''){
       window.alert('标签名不能为空')
     }else if(this.dataSource){
-    this.$emit('updata:dataSourse',[...this.dataSource,name]);
+    this.$emit('update:dataSource',[...this.dataSource,name]);
       }        
     }
   };
@@ -45,6 +45,7 @@ import {Component, Prop} from 'vue-property-decorator';
 
 <style lang="scss" scoped>
   .tags {
+    background:white;
     font-size: 14px;
     padding: 16px;
     flex-grow: 1;
