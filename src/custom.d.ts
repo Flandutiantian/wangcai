@@ -1,3 +1,4 @@
+
 type RecordItem = {
     tags: string[]
     notes: string
@@ -20,9 +21,14 @@ type RecordItem = {
   }
   
   interface Window {
-    tagList: Tag[];
-    createTag: (name: string) => void;
-    findTag: (id: string) => Tag | undefined;
-    removeTag: (id:string)=>boolean;
-    updateTag: (id:string, name:string)=>'success' | 'not found' | 'duplicated'
+    store:{
+      tagList: Tag[];
+      createTag: (name: string) => void;
+      findTag: (id: string) => Tag | undefined;
+      removeTag: (id:string)=>boolean;
+      recordList: RecordItem[];
+      createRecord: (record:RecordItem) => void;
+      updateTag: (id:string, name:string)=>'success' | 'not found' | 'duplicated'
+    }
+    
   }

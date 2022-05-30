@@ -1,13 +1,14 @@
 <template>
-  
   <Layout>
- <h1>统计</h1>
+<Types/>
   </Layout> 
 </template>
 
-<script lang="ts"> 
+<script lang="ts">
+import Types from "../components/Money/Types.vue"; 
   export default {
-    name: 'Statistics',
-  }
+    name: "Statistics",
+    components: { Types }
+}
 </script>
 
