@@ -1,4 +1,4 @@
-<!-- import Money from '@/views/Money.vue'; -->
+
 <template>
   <div id="app">  
       <router-view/>   
@@ -11,7 +11,6 @@
 body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // text-align: center;
   color:#333;//接近纯黑色，又比纯黑色浅
   line-height: 1.5;
   font-family:$font-hei;
@@ -19,5 +18,4 @@ body{
   background:#f5f5f5;
 }
 
- 
 </style>
