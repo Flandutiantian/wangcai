@@ -5,4 +5,4 @@ const createId = ():number => {
   return id;
 };
 
-export default {createId};
+export default createId;
