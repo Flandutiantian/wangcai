@@ -1,7 +1,7 @@
 
 <template>
   <div id="app">  
-      <router-view/>   
+      <router-view/>    
   </div>
 </template>
 
@@ -16,6 +16,11 @@ body{
   font-family:$font-hei;
   font-size: 16px;
   background:#f5f5f5;
+}
+
+#app{
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 </style>
