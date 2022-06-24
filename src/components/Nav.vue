@@ -6,7 +6,7 @@
       记账
     </router-link>
     <router-link to="/Labels" class="item" active-class="selected">
-      <Icon name="Labels"/>
+      <Icon name="Label"/>
       标签
     </router-link>
     <router-link to="/Statistics" class="item" active-class="selected">

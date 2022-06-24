@@ -1,16 +1,12 @@
 <template>
   <Layout class-prefix="layout">
-    <NumberPad :value.sync="record.amount" @submit="saveRecord"/>
-   
+    <NumberPad :value.sync="record.amount" @submit="saveRecord" />
+    <Tabs :data-source="recordTypeList" 
+          :value.sync="record.type" />
     <div class="notes">
-      <Notes field-name="备注"
-                placeholder="在这里输入备注"
-                :value.sync="record.notes"
-      />
+      <Notes field-name="备注" placeholder="在这里输入备注" :value.sync="record.notes" />
     </div>
-     <Tabs :data-source="recordTypeList"
-          :value.sync="record.type"/>
-    <Tags  @update:value="record.tags = $event"/>
+    <Tags @update:value="record.tags = $event" />
   </Layout>
 </template>
 
@@ -21,7 +17,7 @@
   import {Component} from 'vue-property-decorator';
   import Tabs from '@/components/Tabs.vue';
   import recordTypeList from '@/constants/recordTypeList';
-import Notes from '../components/Money/Notes.vue';
+  import Notes from '../components/Money/Notes.vue';
 
   @Component({
     components: {Tags, Tabs, Notes, NumberPad},
